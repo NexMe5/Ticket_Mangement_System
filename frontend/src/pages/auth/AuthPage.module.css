@@ -1,0 +1,14 @@
+.page { min-height: 100vh; display: grid; grid-template-columns: minmax(360px, 0.85fr) minmax(520px, 1.15fr); }
+.story { display: flex; flex-direction: column; justify-content: space-between; padding: 64px; background: var(--ink); color: white; }
+.storyContent { max-width: 480px; margin: auto 0; }
+.storyContent > svg { color: #7ea5ff; }
+.storyContent h2 { max-width: 440px; margin: 32px 0 20px; font-size: clamp(2.4rem, 5vw, 4.5rem); line-height: 1.02; letter-spacing: -0.055em; }
+.storyContent p { max-width: 420px; margin: 0; color: #b9c6db; font-size: 1.0625rem; line-height: 1.7; }
+.security { margin: 0; color: #8190a9; font-size: 0.75rem; letter-spacing: 0.04em; }
+.formSide { display: grid; place-items: center; padding: 48px; background: var(--surface-subtle); }
+
+@media (max-width: 900px) {
+  .page { grid-template-columns: 1fr; }
+  .story { display: none; }
+  .formSide { min-height: 100vh; padding: 24px; background: white; }
+}

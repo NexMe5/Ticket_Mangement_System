@@ -1,0 +1,23 @@
+:root {
+  --font-sans: 'DM Sans', ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --background: #ffffff;
+  --surface-subtle: #f7f9fc;
+  --surface-hover: #f5f8ff;
+  --ink: #07152d;
+  --ink-soft: #102441;
+  --text: #0d1829;
+  --text-muted: #657084;
+  --text-faint: #8b95a5;
+  --border: #dbe1ea;
+  --border-strong: #c7ced9;
+  --accent: #1455ee;
+  --accent-hover: #0d47d7;
+  --accent-soft: #edf3ff;
+  --success: #0b9f6e;
+  --warning: #e29a05;
+  --danger: #d63d4b;
+  --radius-sm: 5px;
+  --radius-md: 8px;
+  --shadow-drawer: -12px 0 34px rgba(8, 22, 45, 0.08);
+}
+

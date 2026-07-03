@@ -1,0 +1,99 @@
+.panel {
+  width: min(100%, 440px);
+  padding: 48px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--background);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--ink);
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.brandMark {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-sm);
+  background: var(--accent);
+  color: white;
+}
+
+.heading { margin: 44px 0 28px; }
+.heading h1 { margin: 0 0 10px; color: var(--ink); font-size: clamp(1.75rem, 4vw, 2.25rem); line-height: 1.15; letter-spacing: -0.035em; }
+.heading p { margin: 0; color: var(--text-muted); line-height: 1.55; }
+
+.modeSwitch {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 28px;
+  border-bottom: 1px solid var(--border);
+}
+
+.modeSwitch button {
+  position: relative;
+  padding: 12px;
+  border: 0;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.modeSwitch .activeMode { color: var(--accent); }
+.modeSwitch .activeMode::after {
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  height: 2px;
+  background: var(--accent);
+  content: '';
+}
+
+.form { display: grid; gap: 20px; }
+.form label { display: grid; gap: 8px; color: var(--text); font-size: 0.875rem; font-weight: 600; }
+.form input {
+  width: 100%;
+  min-height: 48px;
+  padding: 0 14px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font-size: 0.9375rem;
+}
+.form input::placeholder { color: var(--text-faint); }
+.form input:focus { border-color: var(--accent); outline: 3px solid rgba(20, 85, 238, 0.12); }
+
+.submit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 50px;
+  margin-top: 4px;
+  padding: 0 17px;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-sm);
+  background: var(--accent);
+  color: white;
+  font-size: 0.9375rem;
+  font-weight: 650;
+}
+.submit:hover:not(:disabled) { background: var(--accent-hover); }
+.submit:disabled { cursor: wait; opacity: 0.65; }
+
+.error, .notice { margin: 0; padding: 11px 12px; border-radius: var(--radius-sm); font-size: 0.8125rem; line-height: 1.45; }
+.error { background: #fff1f2; color: #a82332; }
+.notice { background: #edf9f4; color: #087554; }
+.footnote { margin: 28px 0 0; color: var(--text-faint); font-size: 0.75rem; line-height: 1.5; }
+
+@media (max-width: 560px) {
+  .panel { padding: 30px 24px; border: 0; }
+}
+

@@ -1,0 +1,42 @@
+.tableWrap { overflow-x: auto; }
+.table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+.table th { height: 54px; padding: 0 14px; border-bottom: 1px solid var(--border); color: var(--text-muted); font-size: 0.75rem; font-weight: 600; text-align: left; letter-spacing: 0.01em; }
+.table th:first-child, .table td:first-child { width: 42%; padding-left: 8px; }
+.table th:nth-child(2) { width: 16%; }
+.table th:nth-child(3), .table th:nth-child(4) { width: 18%; }
+.table th:last-child { width: 48px; }
+.table td { height: 76px; padding: 0 14px; border-bottom: 1px solid var(--border); color: var(--text-muted); font-size: 0.8125rem; line-height: 1.4; vertical-align: middle; }
+.table tbody tr { transition: background 140ms ease; }
+.table tbody tr:hover { background: var(--surface-hover); }
+.ticketLink { display: flex; align-items: center; gap: 13px; width: 100%; min-width: 0; padding: 10px 0; border: 0; background: transparent; color: var(--text); text-align: left; }
+.ticketLink > svg { flex: 0 0 auto; color: var(--ink-soft); }
+.ticketLink > span { display: grid; min-width: 0; gap: 3px; }
+.ticketLink strong { overflow: hidden; font-size: 0.875rem; font-weight: 550; text-overflow: ellipsis; white-space: nowrap; }
+.ticketLink small { overflow: hidden; color: var(--text-faint); font-size: 0.75rem; font-weight: 400; text-overflow: ellipsis; white-space: nowrap; }
+.rowAction { display: grid; place-items: center; width: 32px; height: 32px; border: 1px solid transparent; border-radius: var(--radius-sm); background: transparent; color: var(--text-muted); }
+.rowAction:hover { border-color: var(--border); background: white; color: var(--accent); }
+.rowAction:disabled { opacity: 0.4; }
+.complete { color: var(--success); }
+.actionCell { text-align: right; }
+.loading { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; padding: 28px 8px; }
+.loading span { height: 58px; border-radius: var(--radius-sm); background: linear-gradient(90deg, #f4f6f9, #e9edf3, #f4f6f9); background-size: 200% 100%; animation: shimmer 1.3s infinite; }
+.loading p { grid-column: 1 / -1; margin: 8px 0 0; color: var(--text-faint); font-size: 0.8125rem; text-align: center; }
+.empty { display: grid; justify-items: center; padding: 100px 24px; text-align: center; }
+.emptyIcon { display: grid; place-items: center; width: 54px; height: 54px; border: 1px solid var(--border); border-radius: 50%; color: var(--text-muted); }
+.empty h2 { margin: 18px 0 7px; font-size: 1rem; }
+.empty p { margin: 0; color: var(--text-muted); font-size: 0.8125rem; }
+@keyframes shimmer { to { background-position: -200% 0; } }
+
+@media (max-width: 820px) {
+  .table th:nth-child(3), .table td:nth-child(3), .table th:nth-child(4), .table td:nth-child(4) { display: none; }
+  .table th:first-child, .table td:first-child { width: 62%; }
+  .table th:nth-child(2) { width: auto; }
+}
+
+@media (max-width: 520px) {
+  .table th { height: 44px; }
+  .table td { height: 68px; padding-right: 6px; padding-left: 6px; }
+  .table th:first-child, .table td:first-child { width: 68%; }
+  .ticketLink { gap: 9px; }
+  .ticketLink small { display: none; }
+}
